@@ -46,7 +46,7 @@ header {
     const req = await fetch("assets/pince.json");
     const data = await req.json();
     /* make sure we don't leave developer settings in the final product */ data.default.hotSpotDebug = false;
-    //data.default.showControls = false;
+    data.default.showControls = false;
     window.pannellum.view = window.pannellum.viewer("view", data);
 })();
 

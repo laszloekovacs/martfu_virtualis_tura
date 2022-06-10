@@ -26980,8 +26980,14 @@ var _infoContainerDefault = parcelHelpers.interopDefault(_infoContainer);
 var _s = $RefreshSig$();
 function App({ url  }) {
     _s();
+    const [showDialog, setShowDialog] = (0, _react.useState)(false);
     function infoClickHandler(e, args) {
-        console.log(args);
+        /* keep a reference of the article */ window.pannellum.article = args.text;
+        setShowDialog(true);
+    }
+    function onSceneChangeHandler(e) {
+        console.log(e);
+        /* hide viewer on scene change */ setShowDialog(false);
     }
     (0, _react.useEffect)(()=>{
         (async function init() {
@@ -26991,17 +26997,17 @@ function App({ url  }) {
                 data.default.hotSpotDebug = false;
                 data.default.showControls = false;
                 /* bind all info bubbles to a callback function before loading */ for(const scene in data.scenes){
-                    if (Array.isArray(data.scenes[scene]?.hotSpots)) for (const p of data.scenes[scene]?.hotSpots){
-                        if (p.type == "info") {
+                    if (Array.isArray(data.scenes[scene]?.hotSpots)) {
+                        for (const p of data.scenes[scene]?.hotSpots)if (p.type == "info") {
                             p.clickHandlerFunc = infoClickHandler;
                             p.clickHandlerArgs = {
                                 ...p
                             };
                         }
-                        console.log(data.scenes[scene]?.hotSpots);
                     }
                 }
-                window.pannellum.view = window.pannellum.viewer("panorama", data);
+                /* create the view */ window.pannellum.view = window.pannellum.viewer("panorama", data);
+                /* bind event for scenechange */ window.pannellum.view.on("scenechange", onSceneChangeHandler);
                 return ()=>{
                     window.pannellum.view.destroy();
                 };
@@ -27013,16 +27019,25 @@ function App({ url  }) {
         url
     ]);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            id: "panorama"
-        }, void 0, false, {
-            fileName: "src/App.jsx",
-            lineNumber: 46,
-            columnNumber: 4
-        }, this)
-    }, void 0, false);
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                id: "panorama"
+            }, void 0, false, {
+                fileName: "src/App.jsx",
+                lineNumber: 59,
+                columnNumber: 4
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoContainerDefault.default), {
+                visible: showDialog
+            }, void 0, false, {
+                fileName: "src/App.jsx",
+                lineNumber: 60,
+                columnNumber: 4
+            }, this)
+        ]
+    }, void 0, true);
 }
-_s(App, "OD7bBpZva5O2jO+Puf00hKivP7c=");
+_s(App, "YOkl3NOB2/T+2YPwvVT+XinfTVU=");
 _c = App;
 exports.default = App;
 var _c;
@@ -27033,7 +27048,52 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./InfoContainer":"gSV8D"}],"gkKU3":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./InfoContainer":"gSV8D","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gSV8D":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$daf9 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$daf9.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+function InfoContainer({ visible  }) {
+    if (visible) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: "images go here"
+            }, void 0, false, {
+                fileName: "src/InfoContainer.jsx",
+                lineNumber: 7,
+                columnNumber: 5
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("article", {}, void 0, false, {
+                fileName: "src/InfoContainer.jsx",
+                lineNumber: 8,
+                columnNumber: 5
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/InfoContainer.jsx",
+        lineNumber: 6,
+        columnNumber: 4
+    }, this);
+    else return;
+}
+_c = InfoContainer;
+exports.default = InfoContainer;
+var _c;
+$RefreshReg$(_c, "InfoContainer");
+
+  $parcel$ReactRefreshHelpers$daf9.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -27183,37 +27243,6 @@ function registerExportsForReactRefresh(module) {
     }
 }
 
-},{"react-refresh/runtime":"786KC"}],"gSV8D":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$daf9 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$daf9.prelude(module);
+},{"react-refresh/runtime":"786KC"}]},["1xC6H","cB1Vh","5TaSf"], "5TaSf", "parcelRequire9510")
 
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-function InfoContainer() {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: "InfoContainer"
-    }, void 0, false, {
-        fileName: "src/InfoContainer.jsx",
-        lineNumber: 4,
-        columnNumber: 9
-    }, this);
-}
-_c = InfoContainer;
-exports.default = InfoContainer;
-var _c;
-$RefreshReg$(_c, "InfoContainer");
-
-  $parcel$ReactRefreshHelpers$daf9.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["1xC6H","cB1Vh","5TaSf"], "5TaSf", "parcelRequire9510")
-
-//# sourceMappingURL=iroda.7583e7ab.js.map
+//# sourceMappingURL=index.7583e7ab.js.map
