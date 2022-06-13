@@ -26986,13 +26986,15 @@ function App({ url  }) {
         setShowDialog(true);
     }
     function onSceneChangeHandler(e) {
-        console.log(e);
         /* hide viewer on scene change */ setShowDialog(false);
+    }
+    function hideInfoWindowHandler(e) {
+        setShowDialog(false);
     }
     (0, _react.useEffect)(()=>{
         (async function init() {
             try {
-                /* load and crete panorama, keep a ref to the data */ const req = await fetch(url);
+                /* load and create panorama, keep a ref to the data */ const req = await fetch(url);
                 const data = await req.json();
                 data.default.hotSpotDebug = false;
                 data.default.showControls = false;
@@ -27024,14 +27026,15 @@ function App({ url  }) {
                 id: "panorama"
             }, void 0, false, {
                 fileName: "src/App.jsx",
-                lineNumber: 59,
+                lineNumber: 62,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoContainerDefault.default), {
-                visible: showDialog
+                visible: showDialog,
+                closeHandler: hideInfoWindowHandler
             }, void 0, false, {
                 fileName: "src/App.jsx",
-                lineNumber: 60,
+                lineNumber: 63,
                 columnNumber: 4
             }, this)
         ]
@@ -27060,25 +27063,73 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-function InfoContainer({ visible  }) {
-    if (visible) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: "images go here"
+var _image = require("./Image");
+var _imageDefault = parcelHelpers.interopDefault(_image);
+function InfoContainer({ visible , closeHandler  }) {
+    /* set current article */ if (window.pannellum?.view == undefined) return;
+    const title = window.pannellum?.article;
+    const scene = window.pannellum?.view?.getConfig();
+    /* grab the article we want */ const article = scene.articles.find((a)=>a.title = title);
+    console.log(article);
+    if (article == undefined) return;
+    /* build image galery */ const images = article.images.map((p, k)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _imageDefault.default), {
+                src: scene.default.imagePath + p
             }, void 0, false, {
                 fileName: "src/InfoContainer.jsx",
-                lineNumber: 7,
+                lineNumber: 22,
+                columnNumber: 4
+            }, this)
+        }, k, false, {
+            fileName: "src/InfoContainer.jsx",
+            lineNumber: 21,
+            columnNumber: 3
+        }, this));
+    const infoStyle = "info wrapper";
+    if (visible) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: infoStyle,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                onClick: closeHandler,
+                children: "bez\xe1r"
+            }, void 0, false, {
+                fileName: "src/InfoContainer.jsx",
+                lineNumber: 31,
                 columnNumber: 5
             }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("article", {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                children: images
+            }, void 0, false, {
                 fileName: "src/InfoContainer.jsx",
-                lineNumber: 8,
+                lineNumber: 32,
+                columnNumber: 5
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("article", {
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                        children: article.title
+                    }, void 0, false, {
+                        fileName: "src/InfoContainer.jsx",
+                        lineNumber: 34,
+                        columnNumber: 6
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        children: article.text
+                    }, void 0, false, {
+                        fileName: "src/InfoContainer.jsx",
+                        lineNumber: 35,
+                        columnNumber: 6
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/InfoContainer.jsx",
+                lineNumber: 33,
                 columnNumber: 5
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/InfoContainer.jsx",
-        lineNumber: 6,
+        lineNumber: 30,
         columnNumber: 4
     }, this);
     else return;
@@ -27093,7 +27144,7 @@ $RefreshReg$(_c, "InfoContainer");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gkKU3":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Image":"2qH3W"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -27243,6 +27294,37 @@ function registerExportsForReactRefresh(module) {
     }
 }
 
-},{"react-refresh/runtime":"786KC"}]},["1xC6H","cB1Vh","5TaSf"], "5TaSf", "parcelRequire9510")
+},{"react-refresh/runtime":"786KC"}],"2qH3W":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$3fb3 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$3fb3.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+function Image({ src  }) {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+        src: src
+    }, void 0, false, {
+        fileName: "src/Image.jsx",
+        lineNumber: 4,
+        columnNumber: 9
+    }, this);
+}
+_c = Image;
+exports.default = Image;
+var _c;
+$RefreshReg$(_c, "Image");
+
+  $parcel$ReactRefreshHelpers$3fb3.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["1xC6H","cB1Vh","5TaSf"], "5TaSf", "parcelRequire9510")
 
 //# sourceMappingURL=index.7583e7ab.js.map

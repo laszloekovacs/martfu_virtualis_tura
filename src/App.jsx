@@ -11,15 +11,18 @@ function App({url}) {
 	}
 
 	function onSceneChangeHandler(e) {
-		console.log(e);
 		/* hide viewer on scene change */
+		setShowDialog(false);
+	}
+
+	function hideInfoWindowHandler(e) {
 		setShowDialog(false);
 	}
 
 	useEffect(() => {
 		(async function init() {
 			try {
-				/* load and crete panorama, keep a ref to the data */
+				/* load and create panorama, keep a ref to the data */
 				const req = await fetch(url);
 				const data = await req.json();
 				data.default.hotSpotDebug = false;
@@ -57,7 +60,10 @@ function App({url}) {
 	return (
 		<>
 			<div id="panorama"></div>
-			<InfoContainer visible={showDialog}></InfoContainer>
+			<InfoContainer
+				visible={showDialog}
+				closeHandler={hideInfoWindowHandler}
+			></InfoContainer>
 		</>
 	);
 }
