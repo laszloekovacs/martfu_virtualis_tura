@@ -27144,7 +27144,38 @@ $RefreshReg$(_c, "InfoContainer");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Image":"2qH3W"}],"gkKU3":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Image":"2qH3W","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"2qH3W":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$3fb3 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$3fb3.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+function Image({ src  }) {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+        src: src
+    }, void 0, false, {
+        fileName: "src/Image.jsx",
+        lineNumber: 4,
+        columnNumber: 9
+    }, this);
+}
+_c = Image;
+exports.default = Image;
+var _c;
+$RefreshReg$(_c, "Image");
+
+  $parcel$ReactRefreshHelpers$3fb3.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -27294,37 +27325,6 @@ function registerExportsForReactRefresh(module) {
     }
 }
 
-},{"react-refresh/runtime":"786KC"}],"2qH3W":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$3fb3 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$3fb3.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-function Image({ src  }) {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-        src: src
-    }, void 0, false, {
-        fileName: "src/Image.jsx",
-        lineNumber: 4,
-        columnNumber: 9
-    }, this);
-}
-_c = Image;
-exports.default = Image;
-var _c;
-$RefreshReg$(_c, "Image");
-
-  $parcel$ReactRefreshHelpers$3fb3.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["1xC6H","cB1Vh","5TaSf"], "5TaSf", "parcelRequire9510")
+},{"react-refresh/runtime":"786KC"}]},["1xC6H","cB1Vh","5TaSf"], "5TaSf", "parcelRequire9510")
 
 //# sourceMappingURL=index.7583e7ab.js.map

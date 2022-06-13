@@ -60,10 +60,12 @@ function App({url}) {
 	return (
 		<>
 			<div id="panorama"></div>
-			<InfoContainer
-				visible={showDialog}
-				closeHandler={hideInfoWindowHandler}
-			></InfoContainer>
+			<div id="ui">
+				<InfoContainer
+					visible={showDialog}
+					closeHandler={hideInfoWindowHandler}
+				></InfoContainer>
+			</div>
 		</>
 	);
 }

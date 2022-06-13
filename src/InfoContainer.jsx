@@ -28,7 +28,12 @@ function InfoContainer({visible, closeHandler}) {
 	if (visible) {
 		return (
 			<div className={infoStyle}>
-				<button onClick={closeHandler}>bezár</button>
+				<div className="btn_container">
+					<button className="btn_close" onClick={closeHandler}>
+						bezár
+					</button>
+				</div>
+
 				<ul>{images}</ul>
 				<article>
 					<h2>{article.title}</h2>
