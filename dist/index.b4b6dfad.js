@@ -27092,9 +27092,9 @@ function InfoContainer({ visible , closeHandler  }) {
             lineNumber: 21,
             columnNumber: 3
         }, this));
-    const infoStyle = "info wrapper";
+    //	const viewer =
     if (visible) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: infoStyle,
+        className: "info",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "btn_container",

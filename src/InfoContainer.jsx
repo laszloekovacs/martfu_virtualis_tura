@@ -23,11 +23,11 @@ function InfoContainer({visible, closeHandler}) {
 		</li>
 	));
 
-	const infoStyle = 'info wrapper';
+	//	const viewer =
 
 	if (visible) {
 		return (
-			<div className={infoStyle}>
+			<div className="info">
 				<div className="btn_container">
 					<button className="btn_close" onClick={closeHandler}>
 						bezár
