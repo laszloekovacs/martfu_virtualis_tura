@@ -5,8 +5,7 @@
 	"main": "index.js",
 	"source": "index.html",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "parcel -p4797"
+		"start": "parcel -p5797"
 	},
 	"author": "",
 	"license": "ISC",
