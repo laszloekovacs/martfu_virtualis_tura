@@ -2880,20 +2880,20 @@ const root = (0, _clientDefault.default).createRoot(document.getElementById("ui"
 function infoClickHandler(e, args) {
     console.log("info clicked");
     /* call on every scene change */ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _appDefault.default), {
-        display: "true"
+        display: true
     }, void 0, false, {
         fileName: "src/index.jsx",
-        lineNumber: 12,
+        lineNumber: 13,
         columnNumber: 17
     }, this));
 }
 function onSceneChangeHandler(e) {
     console.log("scene changing");
     root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _appDefault.default), {
-        display: "none"
+        display: false
     }, void 0, false, {
         fileName: "src/index.jsx",
-        lineNumber: 19,
+        lineNumber: 20,
         columnNumber: 17
     }, this));
 }
@@ -27012,14 +27012,13 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 function App({ display  }) {
-    console.log(display);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-            children: display
+        children: display && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            children: "diggs"
         }, void 0, false, {
             fileName: "src/App.jsx",
-            lineNumber: 8,
-            columnNumber: 13
+            lineNumber: 7,
+            columnNumber: 26
         }, this)
     }, void 0, false);
 }

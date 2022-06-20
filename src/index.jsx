@@ -6,17 +6,18 @@ const root = ReactDOM.createRoot(document.getElementById('ui'));
 
 
 
+
 function infoClickHandler(e, args) {
     console.log('info clicked')
     /* call on every scene change */
-    root.render(<App display='true'></App>);
+    root.render(<App display={true}></App>);
 }
 
 
 function onSceneChangeHandler(e) {
 
     console.log('scene changing')
-    root.render(<App display="none"></App>);
+    root.render(<App display={false}></App>);
 }
 
 
@@ -48,6 +49,7 @@ function onSceneChangeHandler(e) {
 
         /* bind event for scenechange */
         window.pannellum.view.on('scenechange', onSceneChangeHandler);
+
 
     } catch (e) {
         console.error('failed to load panorama: ' + e);
