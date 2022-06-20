@@ -2879,21 +2879,22 @@ var _appDefault = parcelHelpers.interopDefault(_app);
 const root = (0, _clientDefault.default).createRoot(document.getElementById("ui"));
 function infoClickHandler(e, args) {
     console.log("info clicked");
-    /* call on every scene change */ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _appDefault.default), {
+    /* call on every scene change */ console.log(args);
+    root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _appDefault.default), {
         display: true
     }, void 0, false, {
         fileName: "src/index.jsx",
-        lineNumber: 13,
+        lineNumber: 14,
         columnNumber: 17
     }, this));
 }
 function onSceneChangeHandler(e) {
     console.log("scene changing");
     root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _appDefault.default), {
-        display: false
+        display: ""
     }, void 0, false, {
         fileName: "src/index.jsx",
-        lineNumber: 20,
+        lineNumber: 21,
         columnNumber: 17
     }, this));
 }

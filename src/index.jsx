@@ -10,6 +10,7 @@ const root = ReactDOM.createRoot(document.getElementById('ui'));
 function infoClickHandler(e, args) {
     console.log('info clicked')
     /* call on every scene change */
+    console.log(args)
     root.render(<App display={true}></App>);
 }
 
@@ -17,7 +18,7 @@ function infoClickHandler(e, args) {
 function onSceneChangeHandler(e) {
 
     console.log('scene changing')
-    root.render(<App display={false}></App>);
+    root.render(<App display={''}></App>);
 }
 
 
