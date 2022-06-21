@@ -1,11 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-function App({ display }) {
-
-    return (
-        <>
-            {display && (<div>diggs</div>)}
-        </>
-    )
+function App({display}) {
+	return <>{display && <div>app</div>}</>;
 }
-export default App
+export default App;

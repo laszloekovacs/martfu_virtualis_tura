@@ -2,10 +2,10 @@
 	"name": "martfu_virtualis_tura",
 	"version": "1.0.0",
 	"description": "",
-	"main": "index.js",
 	"source": "index.html",
 	"scripts": {
-		"start": "parcel -p5797"
+		"start": "parcel -p5797 --public-url ./",
+		"build": "parcel build --public-url ./"
 	},
 	"author": "",
 	"license": "ISC",
