@@ -50,6 +50,13 @@
 					"text": "Vezérigazgató tárgyaló",
 					"targetYaw": "sameAzimuth",
 					"sceneId": "01CC"
+				},
+				{
+					"pitch": -27.92,
+					"yaw": -115.1,
+					"type": "info",
+					"text": "Break away",
+					"targetYaw": "sameAzimuth"
 				}
 			]
 		},
@@ -213,6 +220,13 @@
 					"text": "folyosó",
 					"targetYaw": "sameAzimuth",
 					"sceneId": "R1"
+				},
+				{
+					"pitch": 12.39,
+					"yaw": -19.82,
+					"type": "info",
+					"text": "Országos ismertség",
+					"targetYaw": "sameAzimuth"
 				}
 			]
 		},

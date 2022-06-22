@@ -2,9 +2,9 @@
 	"name": "martfu_virtualis_tura",
 	"version": "1.0.0",
 	"description": "",
-	"source": "index.html",
+	"source": "./src/index.html",
 	"scripts": {
-		"start": "parcel -p5797 --public-url ./",
+		"start": "parcel -p5797",
 		"build": "parcel build --public-url ./"
 	},
 	"author": "",

@@ -5,20 +5,19 @@ import App from './App';
 const root = ReactDOM.createRoot(document.getElementById('ui'));
 
 function infoClickHandler(e, args) {
-	console.log('info clicked');
-	/* call on every scene change */
 	console.log(args);
-	root.render(<App display={true}></App>);
+	root.render(<App info={args.text}></App>);
 }
 
+/* call on every scene change */
 function onSceneChangeHandler(e) {
-	console.log('scene changing');
-	root.render(<App display={false}></App>);
+	root.render(<App info={''}></App>);
 }
 
 (async function init() {
 	try {
 		const url = 'assets/iroda.json';
+
 		/* load and create panorama*/
 		const req = await fetch(url);
 		const data = await req.json();

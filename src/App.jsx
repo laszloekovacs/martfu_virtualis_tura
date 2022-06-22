@@ -1,6 +1,6 @@
 import React from 'react';
 
-function App({display}) {
-	return <>{display && <div>app</div>}</>;
+function App({info}) {
+	return <>{info && <div>app</div>}</>;
 }
 export default App;
