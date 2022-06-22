@@ -1,46 +1,28 @@
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 import App from './App';
 
-const root = ReactDOM.createRoot(document.getElementById('ui'));
+/* config */
+const url = './assets/iroda.json';
+const selector = 'app';
 
-function infoClickHandler(e, args) {
-	console.log(args);
-	root.render(<App info={args.text}></App>);
-}
-
-/* call on every scene change */
-function onSceneChangeHandler(e) {
-	root.render(<App info={''}></App>);
-}
-
-(async function init() {
+/* */
+(async function startup() {
 	try {
-		const url = 'assets/iroda.json';
-
-		/* load and create panorama*/
 		const req = await fetch(url);
 		const data = await req.json();
-		data.default.hotSpotDebug = false;
-		data.default.showControls = false;
 
-		/* bind all info bubbles to a callback function before loading */
-		for (const scene in data.scenes) {
-			if (Array.isArray(data.scenes[scene]?.hotSpots))
-				for (const p of data.scenes[scene]?.hotSpots) {
-					if (p.type == 'info') {
-						p.clickHandlerFunc = infoClickHandler;
-						p.clickHandlerArgs = {...p};
-					}
-				}
-		}
+		/* TODO: Override editor settings */
+		/* keep a copy of the data */
+		window.pano = {};
+		window.pano.data = data;
 
-		/* create the view */
-		window.pannellum.view = window.pannellum.viewer('panorama', data);
-
-		/* bind event for scenechange */
-		window.pannellum.view.on('scenechange', onSceneChangeHandler);
+		console.log(window.pano.data);
+		const root = ReactDOM.createRoot(document.getElementById(selector));
+		root.render(<App></App>);
 	} catch (e) {
-		console.error('failed to load panorama: ' + e);
+		console.error('failed to init: ');
+		console.error(e);
 	}
 })();

@@ -13,16 +13,16 @@
   position: relative;
 }
 
-#root #panorama {
-  width: 100%;
-  height: 100%;
-}
-
 #root #ui {
   z-index: 1;
   position: absolute;
   top: 0;
   left: 0;
+}
+
+#view {
+  width: 800px;
+  height: 500px;
 }
 
 /*# sourceMappingURL=index.b2d9cf43.css.map */

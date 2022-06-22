@@ -2872,53 +2872,30 @@ $parcel$ReactRefreshHelpers$98a3.prelude(module);
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
 var _client = require("react-dom/client");
 var _clientDefault = parcelHelpers.interopDefault(_client);
 var _app = require("./App");
 var _appDefault = parcelHelpers.interopDefault(_app);
-const root = (0, _clientDefault.default).createRoot(document.getElementById("ui"));
-function infoClickHandler(e, args) {
-    console.log("info clicked");
-    /* call on every scene change */ console.log(args);
-    root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _appDefault.default), {
-        info: args.title
-    }, void 0, false, {
-        fileName: "src/index.jsx",
-        lineNumber: 11,
-        columnNumber: 14
-    }, this));
-}
-function onSceneChangeHandler(e) {
-    console.log("scene changing");
-    root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _appDefault.default), {
-        info: false
-    }, void 0, false, {
-        fileName: "src/index.jsx",
-        lineNumber: 16,
-        columnNumber: 14
-    }, this));
-}
-(async function init() {
+/* config */ const url = "./assets/iroda.json";
+const selector = "app";
+/* */ (async function startup() {
     try {
-        const url = "assets/iroda.json";
-        /* load and create panorama*/ const req = await fetch(url);
+        const req = await fetch(url);
         const data = await req.json();
-        data.default.hotSpotDebug = false;
-        data.default.showControls = false;
-        /* bind all info bubbles to a callback function before loading */ for(const scene in data.scenes){
-            if (Array.isArray(data.scenes[scene]?.hotSpots)) {
-                for (const p of data.scenes[scene]?.hotSpots)if (p.type == "info") {
-                    p.clickHandlerFunc = infoClickHandler;
-                    p.clickHandlerArgs = {
-                        ...p
-                    };
-                }
-            }
-        }
-        /* create the view */ window.pannellum.view = window.pannellum.viewer("panorama", data);
-        /* bind event for scenechange */ window.pannellum.view.on("scenechange", onSceneChangeHandler);
+        /* TODO: Override editor settings */ /* keep a copy of the data */ window.pano = {};
+        window.pano.data = data;
+        console.log(window.pano.data);
+        const root = (0, _clientDefault.default).createRoot(document.getElementById(selector));
+        root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _appDefault.default), {}, void 0, false, {
+            fileName: "src/index.jsx",
+            lineNumber: 23,
+            columnNumber: 15
+        }, this));
     } catch (e) {
-        console.error("failed to load panorama: " + e);
+        console.error("failed to init: ");
+        console.error(e);
     }
 })();
 
@@ -2927,7 +2904,7 @@ function onSceneChangeHandler(e) {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","./App":"e9Zfo","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./App":"e9Zfo","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("./cjs/react-jsx-dev-runtime.development.js");
 
@@ -27012,23 +26989,86 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-function App({ info  }) {
+var _view = require("./View");
+var _viewDefault = parcelHelpers.interopDefault(_view);
+var _s = $RefreshSig$();
+/* note: strict mode will render twice! */ function App() {
+    _s();
+    const [showInfo, setShowInfo] = (0, _react.useState)(false);
+    function sceneChangeHandler(scene) {
+        console.log("changing scene to: " + scene);
+    }
+    function infoClickHandler(e, info) {
+        console.log(info);
+    }
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: info && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            children: "app"
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _viewDefault.default), {
+            onSceneChange: sceneChangeHandler,
+            onInfoClick: infoClickHandler
         }, void 0, false, {
             fileName: "src/App.jsx",
-            lineNumber: 4,
-            columnNumber: 20
+            lineNumber: 18,
+            columnNumber: 4
         }, this)
     }, void 0, false);
 }
+_s(App, "HOx4m4f9XShiV8Qg6Wu1E3I8Ryg=");
 _c = App;
 exports.default = App;
 var _c;
 $RefreshReg$(_c, "App");
 
   $parcel$ReactRefreshHelpers$2430.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./View":"31UPT","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"31UPT":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$49d4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$49d4.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _s = $RefreshSig$();
+function View({ onSceneChange , onInfoClick  }) {
+    _s();
+    (0, _react.useEffect)(()=>{
+        /* bind handler to info bubbles before loading */ const data = window.pano.data;
+        for(const scene in data.scenes)if (Array.isArray(data.scenes[scene]?.hotSpots)) {
+            for (const p of data.scenes[scene]?.hotSpots)if (p.type == "info") {
+                p.clickHandlerFunc = onInfoClick;
+                p.clickHandlerArgs = {
+                    ...p
+                };
+            }
+        }
+        window.pano.view = window.pannellum.viewer("view", window.pano.data);
+        window.pano.view.on("scenechange", onSceneChange);
+        return ()=>{
+            window.pano.view.destroy();
+        };
+    }, []);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        id: "view"
+    }, void 0, false, {
+        fileName: "src/View.jsx",
+        lineNumber: 29,
+        columnNumber: 9
+    }, this);
+}
+_s(View, "OD7bBpZva5O2jO+Puf00hKivP7c=");
+_c = View;
+exports.default = View;
+var _c;
+$RefreshReg$(_c, "View");
+
+  $parcel$ReactRefreshHelpers$49d4.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;

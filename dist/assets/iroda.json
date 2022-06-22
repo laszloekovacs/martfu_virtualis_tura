@@ -1431,6 +1431,17 @@
 			]
 		}
 	},
-	"articles": [],
+	"articles": [
+		{
+			"title": "Break away",
+			"images": [
+				"_DSC0707.JPG",
+				"_DSC0819.JPG",
+				"_DSC0848.JPG",
+				"_DSC0850.JPG",
+				"_DSC0854.JPG"
+			]
+		}
+	],
 	"editor": {"currentScene": "01AA"}
 }
