@@ -15,6 +15,7 @@ const selector = 'app';
 
 		/* TODO: Override editor settings */
 		data.default.hotSpotDebug = false;
+		data.default.showControls = false;
 
 		/* keep a copy of the data */
 		window.pano = {};

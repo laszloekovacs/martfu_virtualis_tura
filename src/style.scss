@@ -8,22 +8,37 @@
 	box-sizing: border-box;
 }
 
-#root {
+#app {
 	width: 100vw;
 	height: 100vh;
-	/*overflow: hidden;*/
+	overflow: hidden;
 	position: relative;
-
-	#ui {
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: 1;
-	}
 }
+
+#info {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1;
+	width: 40%;
+	height: 100%;
+	background-color: rgba(1, 1, 1, 0.92);
+	overflow-y: scroll;
+}
+
 #view {
-	width: 800px;
-	height: 500px;
+	width: 100%;
+	height: 100%;
+}
+
+iframe {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+#article {
+	color: white;
 }
 
 img {

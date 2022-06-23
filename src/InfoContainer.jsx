@@ -6,11 +6,11 @@ function InfoContainer({article, onCloseInfo}) {
 	/* TODO: if we only have one image, render the image viewer only*/
 
 	return (
-		<>
+		<div id="info">
 			<button onClick={onCloseInfo}>bezár</button>
 			<ImageList title={article}></ImageList>
 			<Article title={article}></Article>
-		</>
+		</div>
 	);
 }
 

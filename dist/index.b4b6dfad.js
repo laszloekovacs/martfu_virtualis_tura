@@ -2885,13 +2885,14 @@ const selector = "app";
         const req = await fetch(url);
         const data = await req.json();
         /* TODO: Override editor settings */ data.default.hotSpotDebug = false;
+        data.default.showControls = false;
         /* keep a copy of the data */ window.pano = {};
         window.pano.data = data;
         console.log(window.pano.data);
         const root = (0, _clientDefault.default).createRoot(document.getElementById(selector));
         root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _appDefault.default), {}, void 0, false, {
             fileName: "src/index.jsx",
-            lineNumber: 25,
+            lineNumber: 26,
             columnNumber: 15
         }, this));
     } catch (e) {
@@ -27010,7 +27011,7 @@ function App() {
             return;
         }
         setArticle(info.text);
-        setShowInfo(true);
+        setShowInfo(!showInfo);
     }
     function closeInfoHandler(e) {
         setShowInfo(false);
@@ -27264,7 +27265,8 @@ var _articleDefault = parcelHelpers.interopDefault(_article);
 var _imageList = require("./ImageList");
 var _imageListDefault = parcelHelpers.interopDefault(_imageList);
 function InfoContainer({ article , onCloseInfo  }) {
-    /* TODO: if we only have one image, render the image viewer only*/ return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+    /* TODO: if we only have one image, render the image viewer only*/ return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        id: "info",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                 onClick: onCloseInfo,
@@ -27289,7 +27291,11 @@ function InfoContainer({ article , onCloseInfo  }) {
                 columnNumber: 4
             }, this)
         ]
-    }, void 0, true);
+    }, void 0, true, {
+        fileName: "src/infoContainer.jsx",
+        lineNumber: 9,
+        columnNumber: 3
+    }, this);
 }
 _c = InfoContainer;
 exports.default = InfoContainer;
@@ -27313,24 +27319,28 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _s = $RefreshSig$();
 const articlebasepath = "assets/Articles/";
 function Article({ title  }) {
+    _s();
+    const divRef = (0, _react.useRef)();
     /* the source will be: basepath + title + html */ if (!title) {
         console.error("article not found!");
         return;
     }
     const source = articlebasepath + title + ".html";
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("iframe", {
-            src: source,
-            frameBorder: "0"
-        }, void 0, false, {
-            fileName: "src/Article.jsx",
-            lineNumber: 16,
-            columnNumber: 4
-        }, this)
-    }, void 0, false);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("iframe", {
+        id: "article",
+        title: source,
+        src: source,
+        frameBorder: "0"
+    }, void 0, false, {
+        fileName: "src/Article.jsx",
+        lineNumber: 17,
+        columnNumber: 3
+    }, this);
 }
+_s(Article, "MAMAaDT8oTSNqTzyXCTKnOxvYEU=");
 _c = Article;
 exports.default = Article;
 var _c;
@@ -27376,6 +27386,7 @@ function ImageList({ title  }) {
             columnNumber: 3
         }, this));
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        id: "imageList",
         onClick: zoomHandler,
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
             children: images

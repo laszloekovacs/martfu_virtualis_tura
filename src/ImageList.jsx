@@ -17,7 +17,7 @@ function ImageList({title}) {
 	));
 
 	return (
-		<div onClick={zoomHandler}>
+		<div id="imageList" onClick={zoomHandler}>
 			<ul>{images}</ul>
 		</div>
 	);

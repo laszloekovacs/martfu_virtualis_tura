@@ -24,7 +24,7 @@ function App() {
 		}
 
 		setArticle(info.text);
-		setShowInfo(true);
+		setShowInfo(!showInfo);
 	}
 
 	function closeInfoHandler(e) {
