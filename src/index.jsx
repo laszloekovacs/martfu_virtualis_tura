@@ -14,6 +14,8 @@ const selector = 'app';
 		const data = await req.json();
 
 		/* TODO: Override editor settings */
+		data.default.hotSpotDebug = false;
+
 		/* keep a copy of the data */
 		window.pano = {};
 		window.pano.data = data;
