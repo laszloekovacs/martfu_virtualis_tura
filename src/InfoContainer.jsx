@@ -7,7 +7,7 @@ function InfoContainer({article, onCloseInfo}) {
 
 	return (
 		<div id="info">
-			<div>
+			<div id="btn_container">
 				<button onClick={onCloseInfo}>bezár</button>
 			</div>
 			<ImageList title={article}></ImageList>

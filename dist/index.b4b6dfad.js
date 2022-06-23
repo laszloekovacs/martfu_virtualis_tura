@@ -27268,6 +27268,7 @@ function InfoContainer({ article , onCloseInfo  }) {
         id: "info",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                id: "btn_container",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                     onClick: onCloseInfo,
                     children: "bez\xe1r"
@@ -27334,25 +27335,20 @@ function Article({ title  }) {
         return;
     }
     const source = articlebasepath + title.trim().toLowerCase() + ".html";
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("embed", {
+    fetch(source).then((req)=>req.text()).then((fragment)=>{
+        divRef.current.innerHTML = fragment;
+    }).catch((e)=>{
+        console.error("failed to load fragment:" + e);
+    });
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         id: "article",
-        type: "text/html",
-        src: source
+        ref: divRef
     }, void 0, false, {
         fileName: "src/Article.jsx",
-        lineNumber: 16,
+        lineNumber: 26,
         columnNumber: 9
     }, this);
-/*
-	return (
-		<iframe
-		id="article"
-		title={source}
-		src={source}
-		frameBorder="0"
-		></iframe>
-		);
-		*/ }
+}
 _s(Article, "MAMAaDT8oTSNqTzyXCTKnOxvYEU=");
 _c = Article;
 exports.default = Article;

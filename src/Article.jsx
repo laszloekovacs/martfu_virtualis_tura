@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {useEffect, useRef} from 'react';
 
 const articlebasepath = 'assets/articles/';
 
@@ -13,18 +13,17 @@ function Article({title}) {
 
 	const source = articlebasepath + title.trim().toLowerCase() + '.html';
 
-	return <embed id="article" type="text/html" src={source}></embed>;
+	fetch(source)
+		.then((req) => req.text())
+		.then((fragment) => {
+			divRef.current.innerHTML = fragment;
+		})
 
-	/*
-	return (
-		<iframe
-		id="article"
-		title={source}
-		src={source}
-		frameBorder="0"
-		></iframe>
-		);
-		*/
+		.catch((e) => {
+			console.error('failed to load fragment:' + e);
+		});
+
+	return <div id="article" ref={divRef}></div>;
 }
 
 export default Article;

@@ -25,6 +25,8 @@
   height: 100%;
   background-color: #010101eb;
   flex-flow: column;
+  font-family: Helvetica, Nimbus Sans L, Liberation Sans, Arial, sans-serif;
+  font-size: 20px;
   display: flex;
   position: absolute;
   top: 0;
@@ -32,22 +34,29 @@
   overflow-x: hidden;
 }
 
-#info div {
+#info p {
+  margin-block-end: 1rem;
+}
+
+#info #btn_container {
   flex-flow: column;
   align-items: flex-end;
-  margin: .8rem;
   display: flex;
 }
 
-#info div button {
+#info button {
   border: none;
   border-radius: 0;
-  padding: .6rem 2rem;
+  margin: 1rem;
+  padding: .6rem 3rem;
+  font-family: Helvetica, Nimbus Sans L, Liberation Sans, Arial, sans-serif;
+  font-size: 20px;
 }
 
 #info #imageList {
   flex-flow: column;
   align-content: center;
+  margin: 1rem;
   display: flex;
 }
 
@@ -69,10 +78,10 @@
 }
 
 #info #article {
+  color: #fff;
   width: 100%;
   height: 100%;
-  margin: .8rem;
-  padding: 0;
+  margin: 1rem;
 }
 
 /*# sourceMappingURL=index.b2d9cf43.css.map */
