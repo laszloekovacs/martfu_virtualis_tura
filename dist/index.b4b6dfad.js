@@ -27004,14 +27004,13 @@ function App() {
         setShowInfo(false);
     }
     function infoClickHandler(e, info) {
-        console.log(info.text);
         /* check if article is actually registered */ const _article = window.pano.data.articles.find((a)=>a.title == info.text);
         if (_article == undefined) {
             console.error("article is not registered");
             return;
         }
         setArticle(info.text);
-        setShowInfo(!showInfo);
+        setShowInfo(true);
     }
     function closeInfoHandler(e) {
         setShowInfo(false);
@@ -27023,7 +27022,7 @@ function App() {
                 onInfoClick: infoClickHandler
             }, void 0, false, {
                 fileName: "src/App.jsx",
-                lineNumber: 36,
+                lineNumber: 34,
                 columnNumber: 4
             }, this),
             showInfo && article && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoContainerDefault.default), {
@@ -27031,7 +27030,7 @@ function App() {
                 onCloseInfo: closeInfoHandler
             }, void 0, false, {
                 fileName: "src/App.jsx",
-                lineNumber: 41,
+                lineNumber: 39,
                 columnNumber: 5
             }, this)
         ]
@@ -27268,9 +27267,15 @@ function InfoContainer({ article , onCloseInfo  }) {
     /* TODO: if we only have one image, render the image viewer only*/ return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         id: "info",
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                onClick: onCloseInfo,
-                children: "bez\xe1r"
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                    onClick: onCloseInfo,
+                    children: "bez\xe1r"
+                }, void 0, false, {
+                    fileName: "src/infoContainer.jsx",
+                    lineNumber: 11,
+                    columnNumber: 5
+                }, this)
             }, void 0, false, {
                 fileName: "src/infoContainer.jsx",
                 lineNumber: 10,
@@ -27280,14 +27285,14 @@ function InfoContainer({ article , onCloseInfo  }) {
                 title: article
             }, void 0, false, {
                 fileName: "src/infoContainer.jsx",
-                lineNumber: 11,
+                lineNumber: 13,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _articleDefault.default), {
                 title: article
             }, void 0, false, {
                 fileName: "src/infoContainer.jsx",
-                lineNumber: 12,
+                lineNumber: 14,
                 columnNumber: 4
             }, this)
         ]
@@ -27320,7 +27325,7 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _s = $RefreshSig$();
-const articlebasepath = "assets/Articles/";
+const articlebasepath = "assets/articles/";
 function Article({ title  }) {
     _s();
     const divRef = (0, _react.useRef)();
@@ -27328,18 +27333,26 @@ function Article({ title  }) {
         console.error("article not found!");
         return;
     }
-    const source = articlebasepath + title + ".html";
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("iframe", {
+    const source = articlebasepath + title.trim().toLowerCase() + ".html";
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("embed", {
         id: "article",
-        title: source,
-        src: source,
-        frameBorder: "0"
+        type: "text/html",
+        src: source
     }, void 0, false, {
         fileName: "src/Article.jsx",
-        lineNumber: 17,
-        columnNumber: 3
+        lineNumber: 16,
+        columnNumber: 9
     }, this);
-}
+/*
+	return (
+		<iframe
+		id="article"
+		title={source}
+		src={source}
+		frameBorder="0"
+		></iframe>
+		);
+		*/ }
 _s(Article, "MAMAaDT8oTSNqTzyXCTKnOxvYEU=");
 _c = Article;
 exports.default = Article;
@@ -27387,8 +27400,8 @@ function ImageList({ title  }) {
         }, this));
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         id: "imageList",
-        onClick: zoomHandler,
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+            onClick: zoomHandler,
             children: images
         }, void 0, false, {
             fileName: "src/ImageList.jsx",

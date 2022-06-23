@@ -1,7 +1,7 @@
 {
 	"default": {
 		"firstScene": "R1",
-		"sceneFadeDuration": 1000,
+		"sceneFadeDuration": 0,
 		"type": "equirectangular",
 		"autoLoad": true,
 		"compass": true,

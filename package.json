@@ -4,7 +4,7 @@
 	"description": "",
 	"source": "./src/index.html",
 	"scripts": {
-		"start": "parcel -p7787",
+		"start": "parcel -p7784",
 		"build": "parcel build --public-url ./"
 	},
 	"author": "",

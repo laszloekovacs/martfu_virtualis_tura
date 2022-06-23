@@ -11,8 +11,6 @@ function App() {
 	}
 
 	function infoClickHandler(e, info) {
-		console.log(info.text);
-
 		/* check if article is actually registered */
 		const _article = window.pano.data.articles.find(
 			(a) => a.title == info.text
@@ -24,7 +22,7 @@ function App() {
 		}
 
 		setArticle(info.text);
-		setShowInfo(!showInfo);
+		setShowInfo(true);
 	}
 
 	function closeInfoHandler(e) {

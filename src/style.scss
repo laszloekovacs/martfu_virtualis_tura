@@ -8,11 +8,19 @@
 	box-sizing: border-box;
 }
 
+iframe {
+}
+
 #app {
 	width: 100vw;
 	height: 100vh;
 	overflow: hidden;
 	position: relative;
+}
+
+#view {
+	width: 100%;
+	height: 100%;
 }
 
 #info {
@@ -23,24 +31,50 @@
 	width: 40%;
 	height: 100%;
 	background-color: rgba(1, 1, 1, 0.92);
-	overflow-y: scroll;
-}
+	overflow-x: hidden;
+	display: flex;
+	flex-flow: column nowrap;
 
-#view {
-	width: 100%;
-	height: 100%;
-}
+	div {
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: flex-end;
+		margin: 0.8rem;
 
-iframe {
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	height: 100%;
-}
-#article {
-	color: white;
-}
+		button {
+			padding: 0.6rem 2rem;
+			border: none;
+			border-radius: 0;
+		}
+	}
 
-img {
-	max-width: 100px;
+	#imageList {
+		display: flex;
+		flex-flow: column nowrap;
+		align-content: center;
+
+		ul {
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: flex-start;
+			gap: 0.3rem;
+
+			li {
+				flex: 3 1 180px;
+
+				img {
+					object-fit: cover;
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+	}
+
+	#article {
+		margin: 0.8rem;
+		padding: 0;
+		width: 100%;
+		height: 100%;
+	}
 }

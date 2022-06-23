@@ -1,6 +1,6 @@
 import React, {useRef} from 'react';
 
-const articlebasepath = 'assets/Articles/';
+const articlebasepath = 'assets/articles/';
 
 function Article({title}) {
 	const divRef = useRef();
@@ -11,16 +11,20 @@ function Article({title}) {
 		return;
 	}
 
-	const source = articlebasepath + title + '.html';
+	const source = articlebasepath + title.trim().toLowerCase() + '.html';
 
+	return <embed id="article" type="text/html" src={source}></embed>;
+
+	/*
 	return (
 		<iframe
-			id="article"
-			title={source}
-			src={source}
-			frameBorder="0"
+		id="article"
+		title={source}
+		src={source}
+		frameBorder="0"
 		></iframe>
-	);
+		);
+		*/
 }
 
 export default Article;
