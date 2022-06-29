@@ -27375,9 +27375,6 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _image = require("./Image");
 var _imageDefault = parcelHelpers.interopDefault(_image);
 function ImageList({ title  }) {
-    function zoomHandler(e) {
-        console.log("zoomin in / out");
-    }
     /* find artcile loop trough images */ const article = window.pano.data.articles.find((a)=>a.title == title);
     if (!article) return;
     const images = article.images.map((v, k)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -27387,27 +27384,26 @@ function ImageList({ title  }) {
                 label: v.label
             }, void 0, false, {
                 fileName: "src/ImageList.jsx",
-                lineNumber: 15,
+                lineNumber: 11,
                 columnNumber: 4
             }, this)
         }, k, false, {
             fileName: "src/ImageList.jsx",
-            lineNumber: 14,
+            lineNumber: 10,
             columnNumber: 3
         }, this));
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         id: "imageList",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-            onClick: zoomHandler,
             children: images
         }, void 0, false, {
             fileName: "src/ImageList.jsx",
-            lineNumber: 21,
+            lineNumber: 17,
             columnNumber: 4
         }, this)
     }, void 0, false, {
         fileName: "src/ImageList.jsx",
-        lineNumber: 20,
+        lineNumber: 16,
         columnNumber: 3
     }, this);
 }

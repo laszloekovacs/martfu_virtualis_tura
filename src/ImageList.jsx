@@ -2,10 +2,6 @@ import React, {useEffect} from 'react';
 import Image from './Image';
 
 function ImageList({title}) {
-	function zoomHandler(e) {
-		console.log('zoomin in / out');
-	}
-
 	/* find artcile loop trough images */
 	const article = window.pano.data.articles.find((a) => a.title == title);
 	if (!article) return;
@@ -18,7 +14,7 @@ function ImageList({title}) {
 
 	return (
 		<div id="imageList">
-			<ul onClick={zoomHandler}>{images}</ul>
+			<ul>{images}</ul>
 		</div>
 	);
 }

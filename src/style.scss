@@ -12,6 +12,10 @@ h1 {
 	margin-top: 2rem;
 	margin-bottom: 1.1rem;
 }
+h2 {
+	margin-top: 2rem;
+	margin-bottom: 1.1rem;
+}
 
 #app {
 	width: 100vw;
@@ -92,6 +96,10 @@ h1 {
 		height: 100%;
 		padding-right: 2rem;
 	}
+}
+
+.imagelabel {
+	color: white;
 }
 
 @media (max-width: 650px) {

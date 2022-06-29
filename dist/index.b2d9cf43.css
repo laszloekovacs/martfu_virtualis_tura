@@ -7,7 +7,7 @@
   list-style: none;
 }
 
-h1 {
+h1, h2 {
   margin-top: 2rem;
   margin-bottom: 1.1rem;
 }
@@ -88,6 +88,10 @@ h1 {
   height: 100%;
   margin: 1rem;
   padding-right: 2rem;
+}
+
+.imagelabel {
+  color: #fff;
 }
 
 @media (max-width: 650px) {
