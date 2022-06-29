@@ -2,10 +2,10 @@ import React, {useState} from 'react';
 
 const imagebasepath = 'assets/images/';
 
-function Image({index, src, label}) {
+function Image({index, src, label, onClick}) {
 	return (
 		<>
-			<img src={imagebasepath + src} alt={label} />
+			<img src={imagebasepath + src} alt={label} onClick={onClick} />
 		</>
 	);
 }

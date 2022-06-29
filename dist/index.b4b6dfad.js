@@ -27374,39 +27374,48 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _image = require("./Image");
 var _imageDefault = parcelHelpers.interopDefault(_image);
+var _s = $RefreshSig$();
 function ImageList({ title  }) {
+    _s();
+    const [isZoomed, setZoomed] = (0, _react.useState)(false);
+    function zoomHandler(e) {
+        setZoomed(!isZoomed);
+    }
     /* find artcile loop trough images */ const article = window.pano.data.articles.find((a)=>a.title == title);
     if (!article) return;
     const images = article.images.map((v, k)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _imageDefault.default), {
                 index: k,
                 src: v.src,
-                label: v.label
+                label: v.label,
+                onClick: zoomHandler
             }, void 0, false, {
                 fileName: "src/ImageList.jsx",
-                lineNumber: 11,
+                lineNumber: 17,
                 columnNumber: 4
             }, this)
         }, k, false, {
             fileName: "src/ImageList.jsx",
-            lineNumber: 10,
+            lineNumber: 16,
             columnNumber: 3
         }, this));
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         id: "imageList",
+        className: isZoomed ? "zoomed" : undefined,
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
             children: images
         }, void 0, false, {
             fileName: "src/ImageList.jsx",
-            lineNumber: 17,
+            lineNumber: 28,
             columnNumber: 4
         }, this)
     }, void 0, false, {
         fileName: "src/ImageList.jsx",
-        lineNumber: 16,
+        lineNumber: 27,
         columnNumber: 3
     }, this);
 }
+_s(ImageList, "gOIVeJd0wRDm65FPDO5yHpgH64A=");
 _c = ImageList;
 exports.default = ImageList;
 var _c;
@@ -27430,11 +27439,12 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 const imagebasepath = "assets/images/";
-function Image({ index , src , label  }) {
+function Image({ index , src , label , onClick  }) {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
             src: imagebasepath + src,
-            alt: label
+            alt: label,
+            onClick: onClick
         }, void 0, false, {
             fileName: "src/Image.jsx",
             lineNumber: 8,
