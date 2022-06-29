@@ -1180,7 +1180,7 @@
 					"pitch": -1.7,
 					"yaw": -118.07,
 					"type": "scene",
-					"text": "14a",
+					"text": "Személyzeti osztály",
 					"targetYaw": "sameAzimuth",
 					"sceneId": "14a"
 				},
@@ -1603,7 +1603,8 @@
 					"label": "Az első Tisza Cipő mintabolt."
 				}
 			]
-		}
+		},
+		{"title": "Bérmunka, export", "images": []}
 	],
-	"editor": {"currentScene": "03b"}
+	"editor": {"currentScene": "02b"}
 }
