@@ -94,7 +94,7 @@ h1, h2 {
   color: #fff;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 750px) {
   #info {
     width: 100%;
   }
