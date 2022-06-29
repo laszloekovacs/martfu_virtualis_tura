@@ -12,7 +12,7 @@ function ImageList({title}) {
 
 	const images = article.images.map((v, k) => (
 		<li key={k}>
-			<Image index={k} src={v} />
+			<Image index={k} src={v.src} label={v.label} />
 		</li>
 	));
 

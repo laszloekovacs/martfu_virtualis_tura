@@ -27383,7 +27383,8 @@ function ImageList({ title  }) {
     const images = article.images.map((v, k)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _imageDefault.default), {
                 index: k,
-                src: v
+                src: v.src,
+                label: v.label
             }, void 0, false, {
                 fileName: "src/ImageList.jsx",
                 lineNumber: 15,
@@ -27433,11 +27434,11 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 const imagebasepath = "assets/images/";
-function Image({ index , src  }) {
+function Image({ index , src , label  }) {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
             src: imagebasepath + src,
-            alt: src
+            alt: label
         }, void 0, false, {
             fileName: "src/Image.jsx",
             lineNumber: 8,
