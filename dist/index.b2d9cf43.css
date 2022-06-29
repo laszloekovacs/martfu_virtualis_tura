@@ -12,6 +12,10 @@ h1, h2 {
   margin-bottom: 1.1rem;
 }
 
+a, a:visited {
+  color: #ff4500;
+}
+
 #app {
   width: 100vw;
   height: 100vh;
@@ -91,6 +95,34 @@ h1, h2 {
 }
 
 .imagelabel {
+  color: #fff;
+}
+
+.ImageView {
+  width: 100vw;
+  height: 100vh;
+  background-color: #010101fa;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.ImageView div {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.ImageView div img {
+  object-fit: contain;
+}
+
+.ImageView div p {
+  text-align: center;
   color: #fff;
 }
 

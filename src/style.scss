@@ -17,6 +17,14 @@ h2 {
 	margin-bottom: 1.1rem;
 }
 
+a {
+	color: orangered;
+}
+
+a:visited {
+	color: orangered;
+}
+
 #app {
 	width: 100vw;
 	height: 100vh;
@@ -100,6 +108,34 @@ h2 {
 
 .imagelabel {
 	color: white;
+}
+
+.ImageView {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(1, 1, 1, 0.98);
+
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem;
+
+	div {
+		max-width: 90%;
+		max-height: 90%;
+
+		img {
+			object-fit: contain;
+		}
+		p {
+			text-align: center;
+			color: white;
+		}
+	}
 }
 
 @media (max-width: 750px) {

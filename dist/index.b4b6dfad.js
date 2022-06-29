@@ -27374,48 +27374,39 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _image = require("./Image");
 var _imageDefault = parcelHelpers.interopDefault(_image);
-var _s = $RefreshSig$();
 function ImageList({ title  }) {
-    _s();
-    const [isZoomed, setZoomed] = (0, _react.useState)(false);
-    function zoomHandler(e) {
-        setZoomed(!isZoomed);
-    }
     /* find artcile loop trough images */ const article = window.pano.data.articles.find((a)=>a.title == title);
     if (!article) return;
     const images = article.images.map((v, k)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _imageDefault.default), {
                 index: k,
                 src: v.src,
-                label: v.label,
-                onClick: zoomHandler
+                label: v.label
             }, void 0, false, {
                 fileName: "src/ImageList.jsx",
-                lineNumber: 17,
+                lineNumber: 11,
                 columnNumber: 4
             }, this)
         }, k, false, {
             fileName: "src/ImageList.jsx",
-            lineNumber: 16,
+            lineNumber: 10,
             columnNumber: 3
         }, this));
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         id: "imageList",
-        className: isZoomed ? "zoomed" : undefined,
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
             children: images
         }, void 0, false, {
             fileName: "src/ImageList.jsx",
-            lineNumber: 28,
+            lineNumber: 17,
             columnNumber: 4
         }, this)
     }, void 0, false, {
         fileName: "src/ImageList.jsx",
-        lineNumber: 27,
+        lineNumber: 16,
         columnNumber: 3
     }, this);
 }
-_s(ImageList, "gOIVeJd0wRDm65FPDO5yHpgH64A=");
 _c = ImageList;
 exports.default = ImageList;
 var _c;
@@ -27438,26 +27429,98 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _imageView = require("./ImageView");
+var _imageViewDefault = parcelHelpers.interopDefault(_imageView);
+var _s = $RefreshSig$();
 const imagebasepath = "assets/images/";
-function Image({ index , src , label , onClick  }) {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-            src: imagebasepath + src,
-            alt: label,
-            onClick: onClick
-        }, void 0, false, {
-            fileName: "src/Image.jsx",
-            lineNumber: 8,
-            columnNumber: 4
-        }, this)
-    }, void 0, false);
+function Image({ index , src , label  }) {
+    _s();
+    const [isZoomed, setZoomed] = (0, _react.useState)(false);
+    function zoomHandler(e) {
+        setZoomed(!isZoomed);
+        console.log("klikk");
+    }
+    if (!isZoomed) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+        src: imagebasepath + src,
+        alt: label,
+        onClick: zoomHandler
+    }, void 0, false, {
+        fileName: "src/Image.jsx",
+        lineNumber: 16,
+        columnNumber: 4
+    }, this);
+    else return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _imageViewDefault.default), {
+        src: imagebasepath + src,
+        label: label,
+        onZoom: zoomHandler
+    }, void 0, false, {
+        fileName: "src/Image.jsx",
+        lineNumber: 20,
+        columnNumber: 4
+    }, this);
 }
+_s(Image, "gOIVeJd0wRDm65FPDO5yHpgH64A=");
 _c = Image;
 exports.default = Image;
 var _c;
 $RefreshReg$(_c, "Image");
 
   $parcel$ReactRefreshHelpers$3fb3.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./ImageView":"759Cm","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"759Cm":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$3753 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$3753.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+function ImageView({ src , label , onZoom  }) {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "ImageView",
+        onClick: onZoom,
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    src: src,
+                    alt: label
+                }, void 0, false, {
+                    fileName: "src/ImageView.jsx",
+                    lineNumber: 7,
+                    columnNumber: 5
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                    children: label
+                }, void 0, false, {
+                    fileName: "src/ImageView.jsx",
+                    lineNumber: 8,
+                    columnNumber: 5
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "src/ImageView.jsx",
+            lineNumber: 6,
+            columnNumber: 4
+        }, this)
+    }, void 0, false, {
+        fileName: "src/ImageView.jsx",
+        lineNumber: 5,
+        columnNumber: 3
+    }, this);
+}
+_c = ImageView;
+exports.default = ImageView;
+var _c;
+$RefreshReg$(_c, "ImageView");
+
+  $parcel$ReactRefreshHelpers$3753.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
