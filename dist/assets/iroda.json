@@ -1055,7 +1055,11 @@
 				}
 			]
 		},
-		"f2": {"title": "Folyosó", "panorama": "f2.jpg", "northOffset": 77.6},
+		"f2": {
+			"title": "Folyosó",
+			"panorama": "f2.jpg",
+			"northOffset": 77.6
+		},
 		"f3": {
 			"title": "Folyosó",
 			"panorama": "f3.jpg",
@@ -1489,18 +1493,21 @@
 			"title": "Vezérigazgató titkárság",
 			"images": [
 				{
-					"src": "_dsc0911.jpg",
+					"src": "dsc0911.jpg",
 					"label": "Festmény Svit gyáráról (Bata-város Szlovákiában)"
 				},
 				{
-					"src": "_dsc0913.jpg",
+					"src": "dsc0913.jpg",
 					"label": "Légifelvétel a Tisza cipőgyár ipartelepéről"
 				},
 				{
-					"src": "_dsc0721.jpg",
+					"src": "dsc0721.jpg",
 					"label": "Mozaik a lépcsőház első emeletén, benne az átadás évszámával "
 				},
-				{"src": "ebédlő.jpg", "label": "Üzemi ebédlő"},
+				{
+					"src": "ebédlő.jpg",
+					"label": "Üzemi ebédlő"
+				},
 				{
 					"src": "irodaház közeli.jpg",
 					"label": "Irodaház archív felvételeken"
@@ -1522,9 +1529,18 @@
 		{
 			"title": "Bata-kor",
 			"images": [
-				{"src": "4_kep.jpg", "label": "Építkezés: gyár és lakóházak"},
-				{"src": "6_kep.jpg", "label": "Építkezés: gyár és lakóházak"},
-				{"src": "45.jpg", "label": "Építkezés: gyár és lakóházak"},
+				{
+					"src": "4_kep.jpg",
+					"label": "Építkezés: gyár és lakóházak"
+				},
+				{
+					"src": "6_kep.jpg",
+					"label": "Építkezés: gyár és lakóházak"
+				},
+				{
+					"src": "45.jpg",
+					"label": "Építkezés: gyár és lakóházak"
+				},
 				{
 					"src": "bata-térkép.jpg",
 					"label": "A város tervezett alaprajza"
@@ -1539,15 +1555,15 @@
 			"title": "Országos ismertség",
 			"images": [
 				{
-					"src": "_dsc0916.jpg",
+					"src": "dsc0916.jpg",
 					"label": "Vezérigazgatói emlékek, köztük két díj a BNV-ről (Budapesti Nemzetközi Vásár)"
 				},
 				{
-					"src": "_dsc0945.jpg",
+					"src": "dsc0945.jpg",
 					"label": "Megsárgult fényképek a falon – cipőkiállítás, a Tisza Cipőgyár standjai Tisza Misivel. A díszletről, installációról a Budapesten működő marketing osztály gondoskodott."
 				},
 				{
-					"src": "_dsc0949.jpg",
+					"src": "dsc0949.jpg",
 					"label": "Megsárgult fényképek a falon – cipőkiállítás, a Tisza Cipőgyár standjai Tisza Misivel. A díszletről, installációról a Budapesten működő marketing osztály gondoskodott."
 				}
 			]
@@ -1555,22 +1571,28 @@
 		{
 			"title": "A Tisza Cipőgyár működése az 1950-60-as években",
 			"images": [
-				{"src": "_dsc0954.jpg", "label": "Export számokban"},
 				{
-					"src": "_dsc0955.jpg",
+					"src": "dsc0954.jpg",
+					"label": "Export számokban"
+				},
+				{
+					"src": "dsc0955.jpg",
 					"label": "A keleti export országai, exportadatok."
 				},
 				{
-					"src": "_dsc0956.jpg",
+					"src": "dsc0956.jpg",
 					"label": "A keleti export országai, exportadatok."
 				},
 				{
-					"src": "_dsc0962.jpg",
+					"src": "dsc0962.jpg",
 					"label": "A keleti export országai, exportadatok."
 				},
-				{"src": "_dsc0974.jpg", "label": "Export katalógus"},
 				{
-					"src": "_dsc0976.jpg",
+					"src": "dsc0974.jpg",
+					"label": "Export katalógus"
+				},
+				{
+					"src": "dsc0976.jpg",
 					"label": "Létszámadatok részletezve 1959-60."
 				}
 			]
@@ -1579,19 +1601,19 @@
 			"title": "Tisza Cipőgyár, mint az ország legnagyobb cipőgyára. 1970-80-as évek",
 			"images": [
 				{
-					"src": "_dsc0867.jpg",
+					"src": "dsc0867.jpg",
 					"label": "Új logó, új típusú edzőcipők. A fényképek cipőkiállításon készültek."
 				},
 				{
-					"src": "_dsc0873.jpg",
+					"src": "dsc0873.jpg",
 					"label": "Fotóalbum cipőkiállításokról, Kimutatás a termelés megoszlásáról 1968."
 				},
 				{
-					"src": "_dsc0874.jpg",
+					"src": "dsc0874.jpg",
 					"label": "Dokumentumok Martfű fejlődéséről, köztük a Tisza Cipő lap 1972. január 14-i számának cikke az 1971. évi eredményekről: cipőmintabolt megnyitása, tanácsi lakás építése, szövetkezeti házak, autóbusz állomás várótermének alapozása, általános iskola bővítése, közművesítés stb."
 				},
 				{
-					"src": "_dsc0876.jpg",
+					"src": "dsc0876.jpg",
 					"label": "Dokumentumok Martfű fejlődéséről, köztük a Tisza Cipő lap 1972. január 14-i számának cikke az 1971. évi eredményekről: cipőmintabolt megnyitása, tanácsi lakás építése, szövetkezeti házak, autóbusz állomás várótermének alapozása, általános iskola bővítése, közművesítés stb."
 				},
 				{
@@ -1604,7 +1626,12 @@
 				}
 			]
 		},
-		{"title": "Bérmunka, export", "images": []}
+		{
+			"title": "Bérmunka, export",
+			"images": []
+		}
 	],
-	"editor": {"currentScene": "02b"}
+	"editor": {
+		"currentScene": "02b"
+	}
 }
