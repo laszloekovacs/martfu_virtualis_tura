@@ -849,7 +849,7 @@
 					"pitch": -5.3,
 					"yaw": 132.3,
 					"type": "info",
-					"text": "’A’-gyár régen és most",
+					"text": "'A'-gyár régen és most",
 					"targetYaw": "sameAzimuth"
 				}
 			]
@@ -1878,7 +1878,7 @@
 			]
 		},
 		{
-			"title": "’A’-gyár régen és most",
+			"title": "'A'-gyár régen és most",
 			"images": [
 				{
 					"src": "agyar1.jpg",
