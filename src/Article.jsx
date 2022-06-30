@@ -21,6 +21,7 @@ function Article({title}) {
 
 		.catch((e) => {
 			console.error('failed to load fragment:' + e);
+			return;
 		});
 
 	return <div id="article" ref={divRef}></div>;
