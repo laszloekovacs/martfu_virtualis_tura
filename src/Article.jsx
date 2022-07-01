@@ -7,14 +7,19 @@ function Article({title}) {
 
 	/* the source will be: basepath + title + html */
 	if (!title) {
-		console.error('article not found!');
+		console.error('article not specified!');
 		return;
 	}
 
 	const source = articlebasepath + title.trim().toLowerCase() + '.html';
 
 	fetch(source)
-		.then((req) => req.text())
+		.then((req) => {
+			if (!req.ok) {
+				return '<div></div>';
+			}
+			return req.text();
+		})
 		.then((fragment) => {
 			divRef.current.innerHTML = fragment;
 		})
