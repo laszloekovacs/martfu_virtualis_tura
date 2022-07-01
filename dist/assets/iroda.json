@@ -95,6 +95,13 @@
 					"type": "info",
 					"text": "Vezérigazgató titkárság",
 					"targetYaw": "sameAzimuth"
+				},
+				{
+					"pitch": 10.01,
+					"yaw": 160.91,
+					"type": "info",
+					"text": "Irodaház",
+					"targetYaw": "sameAzimuth"
 				}
 			]
 		},
@@ -158,10 +165,17 @@
 					"sceneId": "01cc"
 				},
 				{
-					"pitch": -8.56,
-					"yaw": -164.97,
+					"pitch": 5.27,
+					"yaw": 58.74,
 					"type": "info",
 					"text": "Országos ismertség",
+					"targetYaw": "sameAzimuth"
+				},
+				{
+					"pitch": 5.2,
+					"yaw": -12.32,
+					"type": "info",
+					"text": "Cipőkiállítások",
 					"targetYaw": "sameAzimuth"
 				}
 			]
@@ -204,10 +218,17 @@
 					"sceneId": "r1"
 				},
 				{
-					"pitch": -2.64,
-					"yaw": -55.56,
+					"pitch": 4.67,
+					"yaw": -168.03,
 					"type": "info",
 					"text": "Országos ismertség",
+					"targetYaw": "sameAzimuth"
+				},
+				{
+					"pitch": 4.77,
+					"yaw": 79.64,
+					"type": "info",
+					"text": "Cipőkiállítások",
 					"targetYaw": "sameAzimuth"
 				}
 			]
@@ -250,10 +271,17 @@
 					"sceneId": "r1"
 				},
 				{
-					"pitch": -2.27,
-					"yaw": -15.01,
+					"pitch": 5.57,
+					"yaw": -65.5,
 					"type": "info",
 					"text": "Országos ismertség",
+					"targetYaw": "sameAzimuth"
+				},
+				{
+					"pitch": 16.95,
+					"yaw": 158.17,
+					"type": "info",
+					"text": "Cipőkiállítások",
 					"targetYaw": "sameAzimuth"
 				}
 			]
@@ -376,6 +404,13 @@
 					"type": "info",
 					"text": "Tisza Cipőgyár, mint az ország legnagyobb cipőgyára. 1970-80-as évek",
 					"targetYaw": "sameAzimuth"
+				},
+				{
+					"pitch": -16.21,
+					"yaw": 53.72,
+					"type": "info",
+					"text": "A Város fejlődése",
+					"targetYaw": "sameAzimuth"
 				}
 			]
 		},
@@ -461,10 +496,17 @@
 					"sceneId": "r6"
 				},
 				{
-					"pitch": -11.59,
-					"yaw": 51.21,
+					"pitch": -10.77,
+					"yaw": 51.01,
 					"type": "info",
 					"text": "Bérmunka, export",
+					"targetYaw": "sameAzimuth"
+				},
+				{
+					"pitch": -10.87,
+					"yaw": -149.49,
+					"type": "info",
+					"text": "Salamander plakátok",
 					"targetYaw": "sameAzimuth"
 				}
 			]
@@ -489,6 +531,13 @@
 					"text": "Folyosó 7",
 					"targetYaw": "sameAzimuth",
 					"sceneId": "r7"
+				},
+				{
+					"pitch": -36.49,
+					"yaw": -115.92,
+					"type": "info",
+					"text": "Fizetési jegyzetek",
+					"targetYaw": "sameAzimuth"
 				}
 			]
 		},
@@ -520,6 +569,13 @@
 					"text": "Folyosó 7",
 					"targetYaw": "sameAzimuth",
 					"sceneId": "r7"
+				},
+				{
+					"pitch": -17.56,
+					"yaw": 120.66,
+					"type": "info",
+					"text": "Túlórák és bér",
+					"targetYaw": "sameAzimuth"
 				}
 			]
 		},
@@ -549,6 +605,13 @@
 					"yaw": 32.73,
 					"type": "info",
 					"text": "Kereseti lehetőségek, béren kívüli juttatás, szociális gondoskodás",
+					"targetYaw": "sameAzimuth"
+				},
+				{
+					"pitch": -24.34,
+					"yaw": 166.44,
+					"type": "info",
+					"text": "Építsük együtt...",
 					"targetYaw": "sameAzimuth"
 				}
 			]
@@ -718,10 +781,10 @@
 					"sceneId": "10aa"
 				},
 				{
-					"pitch": -33.52,
-					"yaw": -27.18,
+					"pitch": -31.13,
+					"yaw": -27.3,
 					"type": "info",
-					"text": "10. AB Szakszervezeti iroda",
+					"text": "Cipőboltok dokumentumai",
 					"targetYaw": "sameAzimuth"
 				}
 			]
@@ -880,6 +943,13 @@
 					"yaw": -179.25,
 					"type": "info",
 					"text": "Sportélet",
+					"targetYaw": "sameAzimuth"
+				},
+				{
+					"pitch": -2.82,
+					"yaw": -41.78,
+					"type": "info",
+					"text": "Sport 1945",
 					"targetYaw": "sameAzimuth"
 				}
 			]
@@ -1045,6 +1115,13 @@
 					"yaw": 128.02,
 					"type": "info",
 					"text": "Újság",
+					"targetYaw": "sameAzimuth"
+				},
+				{
+					"pitch": -32.98,
+					"yaw": -57.86,
+					"type": "info",
+					"text": "Cikta",
 					"targetYaw": "sameAzimuth"
 				}
 			]
@@ -1642,27 +1719,6 @@
 				{
 					"src": "dsc0913.jpg",
 					"label": "Légifelvétel a Tisza cipőgyár ipartelepéről"
-				},
-				{
-					"src": "dsc0721.jpg",
-					"label": "Mozaik a lépcsőház első emeletén, benne az átadás évszámával"
-				},
-				{"src": "ebédlő.jpg", "label": "Üzemi ebédlő"},
-				{
-					"src": "irodaház közeli.jpg",
-					"label": "Irodaház archív felvételeken"
-				},
-				{
-					"src": "irodaház1.jpg",
-					"label": "Irodaház archív felvételeken"
-				},
-				{
-					"src": "irodaház2.jpg",
-					"label": "Irodaház archív felvételeken"
-				},
-				{
-					"src": "irodaház3.jpg",
-					"label": "Irodaház archív felvételeken"
 				}
 			]
 		},
@@ -1679,7 +1735,8 @@
 				{
 					"src": "iad_16_20140001.jpg",
 					"label": "Cikta cipőgyár katalógusa 1949-ből"
-				}
+				},
+				{"src": "ciktamérleg.jpg", "label": "A Cikta 1942. évi mérlege"}
 			]
 		},
 		{
@@ -1689,13 +1746,10 @@
 					"src": "dsc0916.jpg",
 					"label": "Vezérigazgatói emlékek, köztük két díj a BNV-ről (Budapesti Nemzetközi Vásár)"
 				},
+				{"src": "kavefozo.jpg", "label": "Titkársági Kávéfőző 1985"},
 				{
-					"src": "dsc0945.jpg",
-					"label": "Megsárgult fényképek a falon – cipőkiállítás, a Tisza Cipőgyár standjai Tisza Misivel. A díszletről, installációról a Budapesten működő marketing osztály gondoskodott."
-				},
-				{
-					"src": "dsc0949.jpg",
-					"label": "Megsárgult fényképek a falon – cipőkiállítás, a Tisza Cipőgyár standjai Tisza Misivel. A díszletről, installációról a Budapesten működő marketing osztály gondoskodott."
+					"src": "kavefozohasznalati.jpg",
+					"label": "Titkársági Kávéfőző 1985"
 				}
 			]
 		},
@@ -1732,14 +1786,6 @@
 				{
 					"src": "dsc0873.jpg",
 					"label": "Fotóalbum cipőkiállításokról, Kimutatás a termelés megoszlásáról 1968."
-				},
-				{
-					"src": "dsc0874.jpg",
-					"label": "Dokumentumok Martfű fejlődéséről, köztük a Tisza Cipő lap 1972. január 14-i számának cikke az 1971. évi eredményekről: cipőmintabolt megnyitása, tanácsi lakás építése, szövetkezeti házak, autóbusz állomás várótermének alapozása, általános iskola bővítése, közművesítés stb."
-				},
-				{
-					"src": "dsc0876.jpg",
-					"label": "Dokumentumok Martfű fejlődéséről, köztük a Tisza Cipő lap 1972. január 14-i számának cikke az 1971. évi eredményekről: cipőmintabolt megnyitása, tanácsi lakás építése, szövetkezeti házak, autóbusz állomás várótermének alapozása, általános iskola bővítése, közművesítés stb."
 				},
 				{
 					"src": "cipobolt.jpg",
@@ -1780,11 +1826,7 @@
 				},
 				{
 					"src": "dsc0941.jpg",
-					"label": "Adidas modell, alatta szerződés a Tisza Cipő Rt és az Adidas között 1992. évi feltételekre vonatkozóan."
-				},
-				{
-					"src": "dsc0944.jpg",
-					"label": "Salamander cég plakátjai, dokumentumok az együttműködésről  (05.24)"
+					"label": "Adidas modell, alatta szerződés a Tisza Cipő Rt és az Adidas francia leányvállalata között az 1992. évi feltételekre vonatkozóan"
 				}
 			]
 		},
@@ -1794,14 +1836,6 @@
 				{
 					"src": "dsc0882.jpg",
 					"label": "kitüntetések, oklevelek, köztük Maczó László egykori vezérigazgató Eötvös Loránd-díjához"
-				},
-				{
-					"src": "dsc0890.jpg",
-					"label": "Lakónyilvántartó könyv a cipőgyári lakásokról, lakásbérleti szerződés (név kitakarható?), fotó: társadalmi munka a sportpályán, emléklapok a munkásévekért"
-				},
-				{
-					"src": "dsc0884.jpg",
-					"label": "A Cserkeszőlői üdülő tervei, oklevél a telkibányai üdülő építésében való közreműködésért, Martfűn építendő ’Cs’ típusú lakóház tervei"
 				},
 				{
 					"src": "dsc0894.jpg",
@@ -1838,15 +1872,6 @@
 			"title": "Szakszervezeti iroda",
 			"images": [
 				{"src": "dsc0972.jpg", "label": "Munkavédelmi filmek, 16 mm-es"}
-			]
-		},
-		{
-			"title": "10. AB Szakszervezeti iroda",
-			"images": [
-				{
-					"src": "dsc0967.jpg",
-					"label": "Tisza Cipőgyár mintaboltjainak dokumentumaira is ebben az irodában leltünk rá. A képen a zalaegerszegi Tisza Cipő mintabolt látványterve a neon tisza felirattal"
-				}
 			]
 		},
 		{
@@ -1949,10 +1974,6 @@
 			"title": "Újság",
 			"images": [
 				{
-					"src": "dsc0807.jpg",
-					"label": "Cikta újságok 1948-ból és faliújságcikkek 1945-ből. Az 1948 január-februári újság első oldalán Deák Miklós cikke a második világháború martfűi történéseiről"
-				},
-				{
 					"src": "dsc0809.jpg",
 					"label": "Tisza Cipőgyár Dolgozóinak Lapjai, Tisza Cipő Részvénytársaság Lapja"
 				},
@@ -2001,7 +2022,131 @@
 					"label": "A Művelődési Központ épülete régen és most"
 				}
 			]
+		},
+		{
+			"title": "Irodaház",
+			"images": [
+				{
+					"src": "dsc0721.jpg",
+					"label": "Mozaik a lépcsőház első emeletén, benne az átadás évszámával"
+				},
+				{"src": "ebédlő.jpg", "label": "Üzemi ebédlő"},
+				{
+					"src": "irodaház közeli.jpg",
+					"label": "Irodaház archív felvételeken"
+				},
+				{
+					"src": "irodaház1.jpg",
+					"label": "Irodaház archív felvételeken"
+				},
+				{
+					"src": "irodaház2.jpg",
+					"label": "Irodaház archív felvételeken"
+				},
+				{
+					"src": "irodaház3.jpg",
+					"label": "Irodaház archív felvételeken"
+				}
+			]
+		},
+		{
+			"title": "Cipőkiállítások",
+			"images": [
+				{
+					"src": "dsc0945.jpg",
+					"label": "Megsárgult fényképek a falon – cipőkiállítás, a Tisza Cipőgyár standjai Tisza Misivel. A díszletről, installációról a Budapesten működő marketing osztály gondoskodott."
+				},
+				{
+					"src": "dsc0949.jpg",
+					"label": "Megsárgult fényképek a falon – cipőkiállítás, a Tisza Cipőgyár standjai Tisza Misivel. A díszletről, installációról a Budapesten működő marketing osztály gondoskodott."
+				}
+			]
+		},
+		{
+			"title": "A Város fejlődése",
+			"images": [
+				{
+					"src": "dsc0874.jpg",
+					"label": "Dokumentumok Martfű fejlődéséről, köztük a Tisza Cipő lap 1972. január 14-i számának cikke az 1971. évi eredményekről: cipőmintabolt megnyitása, tanácsi lakás építése, szövetkezeti házak, autóbusz állomás várótermének alapozása, általános iskola bővítése, közművesítés stb."
+				},
+				{
+					"src": "dsc0876.jpg",
+					"label": "Dokumentumok Martfű fejlődéséről, köztük a Tisza Cipő lap 1972. január 14-i számának cikke az 1971. évi eredményekről: cipőmintabolt megnyitása, tanácsi lakás építése, szövetkezeti házak, autóbusz állomás várótermének alapozása, általános iskola bővítése, közművesítés stb."
+				}
+			]
+		},
+		{
+			"title": "Salamander plakátok",
+			"images": [
+				{
+					"src": "dsc0944.jpg",
+					"label": "Salamander cég plakátjai, dokumentumok az együttműködésről"
+				}
+			]
+		},
+		{
+			"title": "Fizetési jegyzetek",
+			"images": [
+				{
+					"src": "fizetesi1.jpg",
+					"label": "Fizetési jegyzékek a Cikta idejéből"
+				},
+				{
+					"src": "fizetesi2.jpg",
+					"label": "Fizetési jegyzékek a Cikta idejéből"
+				}
+			]
+		},
+		{
+			"title": "Túlórák és bér",
+			"images": [
+				{"src": "jegyzek2.jpg", "label": "Bérjegyzékek 1947-ből"},
+				{"src": "jegyzek3.jpg", "label": "Bérjegyzékek 1947-ből"}
+			]
+		},
+		{
+			"title": "Építsük együtt...",
+			"images": [
+				{
+					"src": "dsc0890.jpg",
+					"label": "Lakónyilvántartó könyv a cipőgyári lakásokról, lakásbérleti szerződés, fotó: társadalmi munka a sportpályán, emléklapok a munkásévekért"
+				},
+				{
+					"src": "dsc0884.jpg",
+					"label": "A Cserkeszőlői üdülő tervei, oklevél a telkibányai üdülő építésében való közreműködésért, Martfűn építendő ’Cs’ típusú lakóház tervei"
+				}
+			]
+		},
+		{
+			"title": "Cipőboltok dokumentumai",
+			"images": [
+				{
+					"src": "dsc0967.jpg",
+					"label": "Tisza Cipőgyár mintaboltjainak dokumentumaira is ebben az irodában leltünk rá. A képen a zalaegerszegi Tisza Cipő mintabolt látványterve a neon tisza felirattal"
+				}
+			]
+		},
+		{
+			"title": "Sport 1945",
+			"images": [
+				{"src": "01.jpg", "label": "Faliújságcikkek 1945-ből"},
+				{"src": "03.jpg", "label": "Faliújságcikkek 1945-ből"}
+			]
+		},
+		{
+			"title": "Cikta",
+			"images": [
+				{
+					"src": "dsc0807.jpg",
+					"label": "Cikta újságok 1948-ból és faliújságcikkek 1945-ből"
+				},
+				{
+					"src": "04.jpg",
+					"label": "Az 1948 január-februári újság első oldalán Deák Miklós cikke a második világháború martfűi történéseiről"
+				},
+				{"src": "dsc0813.jpg", "label": "MÁS Újság"}
+			]
 		}
 	],
-	"editor": {"currentScene": "10g"}
+	"editor": {"currentScene": "13a"}
 }
