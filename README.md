@@ -1,6 +1,6 @@
 #Martfű virtuális túra
 
-live version should be available at:
+live version is at:
 http://muzeum.martfumuvhaz.hu/virtualis-kiallitas/
 
 how to run
